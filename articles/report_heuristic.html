@@ -238,6 +238,85 @@
                             <p><strong>Print:</strong></p>
                         </li>
                     </ol>
+
+                    <section aria-labelledby="tabela-severidade">
+                        <h3 id="tabela-severidade">Tabela de Severidade</h3>
+                        <p>Baseado no documento: <strong>P3_ Heuristic Evaluation.pdf</strong></p>
+
+                        <table class="severity-table"
+                            summary="Tabela classificando os erros encontrados segundo a escala de severidade de Nielsen">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Erro Identificado</th>
+                                    <th>Heurística Violada</th>
+                                    <th>Severidade (0-4)*</th>
+                                    <th>Sugestão de Correção</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dependência de Placeholder<br /><small>O exemplo de formatação (11) 99999-9999
+                                            desaparece ao digitar, forçando memorização.</small></td>
+                                    <td>#5 Prevenção de Erros<br />#6 Reconhecimento em vez de memorização</td>
+                                    <td>3 (Grande)</td>
+                                    <td>Mover a dica de formato para fora do campo (label ou texto de apoio) e
+                                        implementar máscara automática de input.</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Inconsistência Visual na Busca<br /><small>A barra de busca muda drasticamente
+                                            de aparência e layout entre a Home e a página de Ajuda.</small></td>
+                                    <td>#4 Consistência e Padrões</td>
+                                    <td>2 (Menor)</td>
+                                    <td>Padronizar o componente de busca (design system) para ser idêntico em todas as
+                                        páginas do sistema.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Ausência de Botão "Cancelar"<br /><small>Na edição de perfil, só existe "Salvar
+                                            Alterações". Não há saída de emergência clara para descartar
+                                            mudanças.</small></td>
+                                    <td>#3 Controle e Liberdade do Usuário</td>
+                                    <td>3 (Grande)</td>
+                                    <td>Adicionar um botão explícito de "Cancelar" ou "Descartar" ao lado do botão de
+                                        salvar.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Falta de Feedback em Uploads<br /><small>Upload de vídeos (Libras) não mostra
+                                            barra de progresso, deixando o usuário sem saber se está
+                                            funcionando.</small></td>
+                                    <td>#1 Visibilidade do Estado do Sistema</td>
+                                    <td>3 (Grande)</td>
+                                    <td>Implementar barra de progresso visual ou porcentagem de upload imediatamente
+                                        após o usuário selecionar o arquivo.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Legenda da Escala de Severidade (Nielsen)</h4>
+                        <ul>
+                            <li><strong>0 - Sem importância:</strong> Não afeta a operação.</li>
+                            <li><strong>1 - Cosmético:</strong> Problema estético, não precisa ser consertado com
+                                urgência.</li>
+                            <li><strong>2 - Menor:</strong> Problema de usabilidade pequeno; baixa prioridade.</li>
+                            <li><strong>3 - Grande:</strong> Problema de usabilidade importante; deve ser consertado com
+                                prioridade.</li>
+                            <li><strong>4 - Catástrofe:</strong> Impede o uso da aplicação; correção imperativa antes do
+                                lançamento.</li>
+                        </ul>
+
+                        <h4>Resumo da Análise</h4>
+                        <p>A maioria dos erros encontrados no relatório (3 dos 4) possui severidade Alta (Grau 3). Isso
+                            ocorre porque afetam diretamente a capacidade do usuário de completar tarefas críticas
+                            (preencher formulários corretamente, saber se um arquivo foi enviado) sem frustração ou
+                            erro. Para um público com deficiência, a falta de feedback de status (Erro 4) e a
+                            dependência
+                            de memória (Erro 1) são barreiras ainda mais significativas.</p>
+                    </section>
+
                 </section>
 
             </article>
